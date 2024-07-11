@@ -1,0 +1,163 @@
+/*HECHO POR: JUAN ESTEBAN CHAVEZ COLLAZOS Y JUAN DAVID VELA CORONADO*/
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #3d5a6c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.contenedor {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+}
+
+.menu {
+    padding: 20px;
+    border-right: 1px solid #ddd;
+    background-color: #7991a0;
+}
+
+.inputField,
+.deslizador {
+    margin-bottom: 15px;
+}
+
+.texto {
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.inputField input[type="number"] {
+    width: 100%;
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.deslizador .entradaRango {
+    display: flex;
+    align-items: center;
+}
+
+.deslizador .entradaRango input[type="range"] {
+    flex: 1;
+}
+
+.deslizador .valor {
+    width: 50px;
+    text-align: center;
+}
+
+.vista {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #d4d6d9;
+}
+
+.simulacion {
+    margin-bottom: 20px;
+
+}
+
+canvas {
+    border: 3px solid #3e3e3e;
+    background-color: #f7f8f8;
+}
+.contenedorSistema {
+    width: 990px;
+    height: 340px;
+    margin: 0 auto; /* Centrar la gráfica */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contenedorGrafica {
+    width: 990px;
+    height: 340px;
+    margin: 0 auto; /* Centrar la gráfica */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.botones {
+    display: flex;
+    gap: 10px;
+}
+
+a {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #000000;
+    background-color: #a3b4bd;
+    border-radius: 5px;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+a span {
+    position: absolute;
+    display: block;
+}
+
+a span:nth-child(1) {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #3d5a6c;
+    animation: animate 1s linear infinite;
+}
+
+a span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: #3d5a6c;
+    animation: animate 1s linear infinite 0.25s;
+}
+
+a span:nth-child(3) {
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background: #3d5a6c;
+    animation: animate 1s linear infinite 0.5s;
+}
+
+a span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: #3d5a6c;
+    animation: animate 1s linear infinite 0.75s;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
